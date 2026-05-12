@@ -1,0 +1,42 @@
+{
+  "name": "@interviewiq/react",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./beta": {
+      "types": "./dist/beta/index.d.ts",
+      "import": "./dist/beta/index.mjs",
+      "require": "./dist/beta/index.js"
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup src/index.tsx src/beta/index.tsx --format cjs,esm --dts --external react",
+    "dev": "tsup src/index.tsx src/beta/index.tsx --format cjs,esm --watch --dts --external react",
+    "lint": "eslint src/",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "dependencies": {
+    "@interviewiq/core": "*",
+    "socket.io-client": "^4.7.4"
+  },
+  "devDependencies": {
+    "@interviewiq/typescript-config": "*",
+    "@interviewiq/core": "*",
+    "@types/react": "^18.2.0",
+    "react": "^18.2.0",
+    "tsup": "^8.0.2",
+    "typescript": "5.9.2",
+    "vitest": "^1.2.1"
+  }
+}

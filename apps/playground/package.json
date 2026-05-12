@@ -1,0 +1,24 @@
+{
+  "name": "playground",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@interviewiq/core": "*",
+    "@interviewiq/tracker-mouse": "*",
+    "@interviewiq/tracker-keyboard": "*",
+    "@interviewiq/tracker-integrity": "*",
+    "@interviewiq/react": "*",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.12",
+    "typescript": "5.9.2"
+  }
+}
